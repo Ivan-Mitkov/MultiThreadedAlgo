@@ -19,7 +19,7 @@ public class ParallelMergeSort extends CountedCompleter<Void>{
     }
     @Override
     public void compute() {
-        if (high - low >300000) {
+        if (high - low >300_000) {
             ParallelMergeSort taskLeft = new ParallelMergeSort(nums, low, middle,this);
             ParallelMergeSort taskRight = new ParallelMergeSort(nums, middle, high,this);
             addToPendingCount(1);
